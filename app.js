@@ -1,21 +1,15 @@
-var express = require('express');
-var app = express();
+var app = require('./config/server');
 
-app.set('view engine', 'ejs');
+var rodaNoticias = require('./app/routers/noticias')
+rodaNoticias(app);
 
-app.get('/noticias', function(req, res){
-	res.render("noticias/noticia");
-});
+var home = require('./app/routers/home')
+home(app);
 
-app.get('/formulario_add', function(req, res){
-	res.render("admin/form_add_noticia");
-});
-
-app.get('/', function(req, res){
-	res.render("home/index");
-});
+var formulario_add = require('./app/routers/formulario_add')
+formulario_add(app);
 
 app.listen(3000, function(){
-	console.log("servidor rodando");
-	console.log("servidor nodemon");
+	console.log();
+
 });
