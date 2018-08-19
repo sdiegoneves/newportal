@@ -10,5 +10,6 @@ var commonMysql = function () {
 }
 
 module.exports = function(){
+	console.log("autoload carregou o dbConnection");
 	return commonMysql;
 }

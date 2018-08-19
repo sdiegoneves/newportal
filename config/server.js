@@ -7,7 +7,8 @@ app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
 consign().include('app/routers')
-.then('config/dbConnections.js')
+.then('config/dbConnection.js')
+.then('app/models')
 .into(app);
 
 module.exports = app;
