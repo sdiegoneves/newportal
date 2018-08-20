@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/sdiegoneves/newportal#readme",
   "dependencies": {
+    "consign": "^0.1.6",
     "ejs": "^2.6.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.3"
   }
 }
